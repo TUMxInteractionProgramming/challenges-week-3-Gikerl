@@ -8,9 +8,10 @@
     /* #4 use #roboto #font */
     font-family: 'Roboto', 'Arial', sans-serif;
 
-     /* #4 #sweat take care of #spacing between various elements */
+    /* #4 #sweat take care of #spacing between various elements */
     margin: 0;
     padding: 0;
+    /*overflow: hidden;*/
 }
 
 body {
@@ -18,8 +19,12 @@ body {
 }
 
 /* #4 # sweat #uppercase buttons and w3w locations */
-button, strong {
+
+button,
+strong {
     text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14sp;
 }
 
 
@@ -27,16 +32,52 @@ button, strong {
 /* APP BAR */
 
 /* #4 #sweat address both #app-bar s */
+
 h1 {
+    position: relative;
+    top: 0px;
     background-color: #3F51B5;
     color: white;
+    height: 72px;
+    line-height: 72px;
+    padding-right: 16px;
+    font-weight: bold;
+    font-size: 20sp;
 }
 
+h1 img {
+    position: relative;
+    left: 16px;
+    bottom: -6px;
+    vertical-align: middle;
+    padding-right: 16px;
+}
 
 /* CHANNELS LIST */
 
 /* #4 #sweat #channels */
+
+#channels {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 40%;
+}
+
+.channel-meta {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+}
+
 ul {
+    font-weight: bold;
+    font-size: 17sp;
+    position: relative;
+    top: 0px;
+    bottom: 72px;
+    height: -webkit-calc(100% - 144px);
+    overflow: auto;
     /* #3 #channels #list modifies h2 to ul */
     background-color: white;
     /* #3 #channels #bullets removed */
@@ -54,6 +95,7 @@ li {
 }
 
 /* #4 active #channel is #highlighted */
+
 li.selected {
     color: #3F51B5;
     border-left: 4px solid #3F51B5;
@@ -67,32 +109,37 @@ li img {
 /* TAB BAR */
 
 /* #4 #sweat #tab-bar */
+
 #tab-bar {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 0px;
     /* #3 #tab-bar #container should be white */
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
-    text-align: center;
 }
 
 /* #4 add styles to #tab-bar #buttons */
+
 #tab-bar button {
     background-color: white;
     border: none;
     font-size: 13px;
-
-    /* #4 #tab-bar buttons have a width of #one-third of the available space */
-    width: 33%;
     height: 72px;
     padding: 16px;
+    width: 33%;
 }
 
 /* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
+
 #tab-bar button img {
     display: block;
     margin: 0 auto 4px auto;
 }
 
 /* #4 the selected #tab-bar #button is #highlighted */
+
 #tab-bar button.selected {
     color: #3F51B5;
     border-bottom: 4px solid #3F51B5;
@@ -100,8 +147,27 @@ li img {
 
 
 /* MESSAGES */
+
 /* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
+
+#chat {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 60%;
+}
+
+#messages {
+
+    position: relative;
+    top: 0px;
+    bottom: 72px;
+    height: -webkit-calc(100% - 144px);
+    overflow: auto;
+}
+
 .message {
+
     /* #3 #chat #width*/
     width: 80%;
 
@@ -114,32 +180,79 @@ li img {
 
 
 .message h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     font-size: medium;
 }
 
 .message h3 em {
+    float: right;
     font-size: larger;
     font-style: normal;
 }
 
+.message h3 span {
+    width: 33.3%;
+    float: left;
+}
+
 .message h3 a {
+    width: 33.3%;
     /* #3 #chat #link color is primary text */
     color: black;
 }
 
 .message p {
+    display: inline-block;
     background-color: white;
     padding: 16px;
 }
 
 .message button {
+    float: right;
+    margin: 16px 8px 8px 0px;
+    display: inline-block;
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
 }
 
 /* #4 left align own #messages using #margins */
+
 .message.own {
     margin-left: 17.5%;
 }
 
+
+
+/* CHAT-BAR */
+
+#chat-bar {
+    position: relative;
+    bottom: 0px;
+}
+
+/* Set emoji button to same height pos as #tab-bar */
+#emojis-button {
+    height: 32px;
+    margin: 20px;
+    border: none;
+    background-color: white;
+}
+
+/* square div, border, padding and absolute pos */
+#emojis {
+    background-color: white;
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    font-size: 28px;
+    padding: 16px;
+    text-align: left;
+
+    position: absolute;
+    bottom: 72px;
+    left: 16px;
+    overflow: auto;
+}
