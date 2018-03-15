@@ -24,7 +24,6 @@ button,
 strong {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 14sp;
 }
 
 
@@ -42,7 +41,6 @@ h1 {
     line-height: 72px;
     padding-right: 16px;
     font-weight: bold;
-    font-size: 20sp;
 }
 
 h1 img {
@@ -51,6 +49,18 @@ h1 img {
     bottom: -6px;
     vertical-align: middle;
     padding-right: 16px;
+}
+
+h1 a
+{
+    color: white;
+    font-weight: bold;
+}
+
+#chat_img
+{
+    float: right;
+    margin: 16px 16px;
 }
 
 /* CHANNELS LIST */
@@ -72,7 +82,6 @@ h1 img {
 
 ul {
     font-weight: bold;
-    font-size: 17sp;
     position: relative;
     top: 0px;
     bottom: 72px;
@@ -89,7 +98,6 @@ li {
     box-sizing: border-box;
     height: 48px;
     padding: 16px;
-    font-size: 16px;
     /* #4 #channel tiles are separated by #lines */
     border-bottom: 1px solid #F5F5F5;
 }
@@ -125,7 +133,6 @@ li img {
 #tab-bar button {
     background-color: white;
     border: none;
-    font-size: 13px;
     height: 72px;
     padding: 16px;
     width: 33%;
