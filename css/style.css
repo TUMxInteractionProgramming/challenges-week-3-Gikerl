@@ -41,9 +41,11 @@ h1 {
     line-height: 72px;
     padding-right: 16px;
     font-weight: bold;
+    overflow: hidden;
 }
 
 h1 img {
+    display: inline-block;
     position: relative;
     left: 16px;
     bottom: -6px;
@@ -61,6 +63,8 @@ h1 a
 {
     float: right;
     margin: 16px 16px;
+    position: relative;
+    top: 0px;
 }
 
 /* CHANNELS LIST */
@@ -200,14 +204,12 @@ li img {
 }
 
 .message h3 span {
-    width: 33.3%;
-    float: left;
 }
 
 .message h3 a {
-    width: 33.3%;
     /* #3 #chat #link color is primary text */
     color: black;
+    
 }
 
 .message p {
